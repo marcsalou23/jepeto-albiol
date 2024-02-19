@@ -7,10 +7,10 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
-app.use(cors()); // Add CORS middleware
+app.use(cors()); // Enable CORS middleware
 
 // Route to handle sending emails
-app.post("/send-email", (req, res) => {
+app.post("/email/send-email", (req, res) => {
   // Get email details from request body
   const { name, phone, email, message } = req.body;
 
@@ -20,6 +20,9 @@ app.post("/send-email", (req, res) => {
     auth: {
       user: "felixianolopex5@gmail.com",
       pass: "Xaxaxa90",
+    },
+    tls: {
+      rejectUnauthorized: false, // Ignore SSL certificate validation errors
     },
   });
 
