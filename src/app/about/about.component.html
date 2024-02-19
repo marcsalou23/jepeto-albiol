@@ -1,0 +1,60 @@
+<div class="about">
+  <div class="container-center">
+    <div class="row about-content">
+      <div class="left col-lg-4 col-md-12">
+        <div class="rounded-image" aria-hidden="true"></div>
+      </div>
+      <div class="right col-lg-7 col-md-9">
+        <h2 class="mb-4">Acerca de Nosotros</h2>
+        <p>
+          Bienvenidos a Albiol Jepeto, donde la pasión por las aventuras
+          turísticas rurales se une a la dedicación por brindar un servicio
+          excepcional. Somos Albert y Marta, una pareja apasionada que decidió
+          convertir nuestra fascinación por el turismo rural en una empresa
+          comprometida con la excelencia y el cuidado.
+        </p>
+
+        <p>
+          Hace unos años, inspirados por nuestras propias experiencias de viaje,
+          decidimos fundar Albiol Jepeto. Nos dimos cuenta de la necesidad de un
+          servicio integral que no solo ofreciera alojamiento seguro, sino que
+          también se preocupara por el bienestar y la comodidad de cada huésped.
+        </p>
+
+        <p>
+          Lo que comenzó como un sueño compartido ahora se ha convertido en una
+          realidad que compartimos con nuestros clientes. En Albiol Jepeto, nos
+          esforzamos por proporcionar un entorno donde la comunidad de
+          entusiastas del turismo rural pueda confiar en que sus experiencias
+          sean atendidas con el mismo cuidado y amor con el que nosotros mismos
+          cuidamos las nuestras.
+        </p>
+
+        <p>
+          Nuestra misión va más allá del hospedaje; buscamos enriquecer la
+          experiencia de cada viajero ofreciendo servicios que marquen la
+          diferencia. Con un equipo dedicado y un compromiso inquebrantable con
+          la calidad, Albiol Jepeto se ha convertido en un hogar lejos de casa
+          para muchos turistas y sus familias.
+        </p>
+
+        <button
+          *ngIf="localBooking"
+          class="btn-medium"
+          aria-label="Reserva ahora"
+          (click)="scrollTo('booking')"
+        >
+          Reserva ahora
+        </button>
+        <button
+          *ngIf="!localBooking"
+          class="btn-medium"
+          aria-label="Reserva ahora"
+          (click)="openLinkInNewTab()"
+        >
+          Reserva ahora
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

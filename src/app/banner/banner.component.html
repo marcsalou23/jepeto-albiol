@@ -1,0 +1,12 @@
+<div class="banner">
+	<div class="container-center text-start">
+		<h2>Planifica tu viaje rural</h2>
+		<ul class="custom-list">
+			<li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Descubre la belleza de la naturaleza</li>
+			<li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Disfruta de la tranquilidad del entorno</li>
+			<li><i class="fa-solid fa-check" aria-label="Checkmark"></i> Experimenta aventuras al aire libre</li>
+		</ul>
+		<button *ngIf="localBooking" class="btn-medium" aria-label="Reserva ahora" (click)="scrollTo('booking')">Reserva ahora</button>
+		<button *ngIf="!localBooking" class="btn-medium" aria-label="Reserva ahora" (click)="openLinkInNewTab()">Reserva ahora</button>
+	</div>
+</div>
