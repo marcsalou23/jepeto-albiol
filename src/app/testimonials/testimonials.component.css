@@ -2,6 +2,10 @@
 	margin: 60px;
 }
 
+.testimonials {
+	display: none;
+}
+
 .row {
 	justify-content: space-between;
 }
