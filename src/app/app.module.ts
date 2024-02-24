@@ -35,6 +35,7 @@ import { PhotoCardComponent } from './photo-card/photo-card.component';
 import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './booking/payment/payment.component';
 import { InvoiceImgComponent } from './booking/payment/invoice-img/invoice-img.component';
+import { FotosComponent } from './fotos/fotos.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { InvoiceImgComponent } from './booking/payment/invoice-img/invoice-img.c
     BookingComponent,
     PaymentComponent,
     InvoiceImgComponent,
-    AppBookingComponent
+    AppBookingComponent,
+    FotosComponent
   ],
   imports: [
     BrowserModule,

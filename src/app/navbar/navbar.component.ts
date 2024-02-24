@@ -1,54 +1,44 @@
-import {Component, HostListener} from "@angular/core";
+import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-	selector: "navbar",
-	templateUrl: "./navbar.component.html",
-	styleUrls: ["./navbar.component.css"],
+  selector: 'navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-	showMenu = false;
-	isSmallScreen = window.innerWidth <= 992;
-	activeSection: string | null = null;
+  showMenu = true; // Always show the menu
+  isSmallScreen = window.innerWidth <= 992;
+  activeSection: string | null = null;
 
-	menuItems = [
-		{label: "INICIO", link: "#home"},
-		{label: "SOBRE NOSOTROS", link: "#about"},
-		{label: "FOTOS", link: "#gallery"},
-		{label: "ACTIVIDADES", link: "#activities"},
-		{label: "SERVICIOS", link: "#services"},
-		{label: "CONTACTO", link: "#contact"},
-	];
+  menuItems = [
+    { label: 'INICIO', link: '#home' },
+    { label: 'SOBRE NOSOTROS', link: '#about' },
+    { label: 'VISITAS', link: '#gallery' }, // Updated link for FOTOS
+    { label: 'ACTIVIDADES', link: '#activities' },
+    { label: 'SERVICIOS', link: '#services' },
+    { label: 'CONTACTO', link: '#contact' },
+    { label: 'GALERÍA', link: '/fotos' },
+    { label: 'HAZ TU RESERVA', link: '/fotos' },
+    { label: 'PRECIOS', link: '/fotos' }, // Updated link for GALERÍA
+  ];
 
-	@HostListener("window:resize", ["$event"])
-	onResize(event: any) {
-		this.isSmallScreen = event.target.innerWidth <= 992;
-	}
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isSmallScreen = event.target.innerWidth <= 992;
+  }
 
-	@HostListener("window:scroll", [])
-	onWindowScroll() {
-		// Determine the active section based on scrolling
-		const sections = ["about", "gallery", "activities", "services", "contact"];
-		const scrollPosition = window.scrollY;
-		let activeSection: string | null = null;
+  constructor(private router: Router) {
+    // Trigger the initial check for screen size
+    this.onResize({ target: { innerWidth: window.innerWidth } });
+  }
 
-		for (const section of sections) {
-			const element = document.getElementById(section);
-			if (element) {
-				const offsetTop = element.offsetTop;
-				if (scrollPosition >= offsetTop - 120) {
-				activeSection = section;
-				}
-			}
-		}
+  // Method to navigate to a section when a menu item is clicked
+  navigateToSection(section: string) {
+    // Use Angular Router to navigate to the section
+    this.router.navigate([section]);
 
-		this.activeSection = activeSection;
-
-		// Check if the user has scrolled and show menu
-		this.showMenu = window.scrollY > 90;
-	}
-
-	constructor() {
-		// Trigger the initial check for screen size
-		this.onResize({target: {innerWidth: window.innerWidth}});
-	}
+    // Close the menu if it's open
+    this.showMenu = false;
+  }
 }

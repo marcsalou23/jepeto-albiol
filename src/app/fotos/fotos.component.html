@@ -1,0 +1,11 @@
+<div class="gallery">
+  <h2>Gallery</h2>
+  <div class="photos-container">
+    <div *ngFor="let photoNumber of photoNumbers" class="photo">
+      <img
+        src="../../assets/images/{{ photoNumber }}.jpg"
+        alt="Photo {{ photoNumber }}"
+      />
+    </div>
+  </div>
+</div>
