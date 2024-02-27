@@ -36,6 +36,8 @@ import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './booking/payment/payment.component';
 import { InvoiceImgComponent } from './booking/payment/invoice-img/invoice-img.component';
 import { FotosComponent } from './fotos/fotos.component';
+import { ServicesListComponent } from './services-list/services-list.component';
+import { CookieConsentComponent } from './cookie-consent/cookie-consent.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { FotosComponent } from './fotos/fotos.component';
     PaymentComponent,
     InvoiceImgComponent,
     AppBookingComponent,
-    FotosComponent
+    FotosComponent,
+    ServicesListComponent,
+    CookieConsentComponent
   ],
   imports: [
     BrowserModule,

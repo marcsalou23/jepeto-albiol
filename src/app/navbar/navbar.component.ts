@@ -20,7 +20,7 @@ export class NavbarComponent {
     { label: 'CONTACTO', link: '#contact' },
     { label: 'GALERÍA', link: '/fotos' },
     { label: 'HAZ TU RESERVA', link: '/fotos' },
-    { label: 'PRECIOS', link: '/fotos' }, // Updated link for GALERÍA
+    { label: 'PRECIOS', link: '/services-list' }, // Updated link for GALERÍA
   ];
 
   @HostListener('window:resize', ['$event'])
