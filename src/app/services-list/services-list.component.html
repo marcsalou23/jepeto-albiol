@@ -1,8 +1,8 @@
 <div class="services-list">
-  <h1>Servicios Ofrecidos</h1>
+  <h1>Servicios Disponibles</h1>
   <h3>
-    Reserva de la casa a través de Airbnb. Todos los servicios son para un
-    máximo de 6 personas.
+    La reserva de la casa a través de Airbnb y para el resto de servicios
+    contactar por whatsapp o teléfono.
   </h3>
   <div class="service-row" *ngFor="let service of services">
     <div class="service-item" *ngFor="let item of service">
@@ -12,6 +12,7 @@
         <p>{{ item.description }}</p>
         <p>Precio: {{ item.price }}</p>
       </div>
+      <h5>* Actividad para un máximo de 6 personas</h5>
     </div>
   </div>
 </div>

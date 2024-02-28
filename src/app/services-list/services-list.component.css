@@ -2,7 +2,6 @@
 .services-list {
     max-width: 1200px;
     margin: 20px auto 0;
-    /* Adjust top margin */
     padding-top: 20px;
 }
 
@@ -10,14 +9,36 @@ h1 {
     font-size: 3.75rem;
     text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
     margin: 55px auto 0;
+    text-align: center;
+    /* Center the h1 element */
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
+    margin: 25px auto 0;
+    padding-bottom: 20px;
+    text-align: center;
+    /* Center the h4 element */
 }
 
 h4 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
     margin: 25px auto 0;
     padding-bottom: 10px;
-    /* Add space between image and text */
+    text-align: center;
+
+    /* Center the h4 element */
+}
+
+h5 {
+    font-size: 0.8rem;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
+    margin: 25px auto 0;
+    padding-bottom: 10px;
+    text-align: center;
+    /* Center the h4 element */
 }
 
 .service-row {
@@ -31,7 +52,6 @@ h4 {
     flex: 0 0 calc(33.33% - 20px);
     margin-bottom: 20px;
     text-align: center;
-    /* Center the text below the image */
 }
 
 .service-details {
@@ -41,8 +61,21 @@ h4 {
 /* Set a fixed height and width for the images */
 img {
     width: 350px;
-    /* Adjust the width as per your preference */
     height: 200px;
-    /* Adjust the height as per your preference */
     object-fit: cover;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .service-item {
+        flex: 0 0 calc(50% - 20px);
+        /* Adjust for smaller screens */
+    }
+
+    img {
+        width: 100%;
+        /* Adjust image width for smaller screens */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
 }
