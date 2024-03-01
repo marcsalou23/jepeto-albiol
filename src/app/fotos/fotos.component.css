@@ -27,7 +27,7 @@ h1 {
 }
 
 .photo:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     /* Add a slight zoom effect on hover */
 }
 
