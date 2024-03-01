@@ -19,8 +19,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScrollService } from './scroll.service';
 
-import { AppAirbnbComponent } from './views/app-airbnb.component';
-import { AppBookingComponent } from './views/app-booking.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -42,7 +40,6 @@ import { CookieConsentComponent } from './cookie-consent/cookie-consent.componen
 @NgModule({
   declarations: [
     AppComponent,
-    AppAirbnbComponent,
     HomeComponent,
     AboutComponent,
     GalleryComponent,
@@ -57,7 +54,6 @@ import { CookieConsentComponent } from './cookie-consent/cookie-consent.componen
     BookingComponent,
     PaymentComponent,
     InvoiceImgComponent,
-    AppBookingComponent,
     FotosComponent,
     ServicesListComponent,
     CookieConsentComponent
