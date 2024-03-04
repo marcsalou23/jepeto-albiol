@@ -42,10 +42,17 @@ h5 {
 }
 
 .service-row {
+    margin: 25px auto 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    /* Color del borde y grosor */
+    padding: 15px;
+    /* Espacio interno alrededor del borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
 }
 
 .service-item {

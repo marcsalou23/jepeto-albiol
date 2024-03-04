@@ -9,7 +9,8 @@ h1 {
     text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
     margin: 55px auto 0;
     text-align: center;
-    /* Center the h1 element */
+    font-family: "Arial", sans-serif;
+    /* Cambia la fuente a Arial o una fuente sans-serif similar */
 }
 
 .photos-container {
@@ -21,14 +22,14 @@ h1 {
 
 .photo {
     width: calc(33.33% - 20px);
-    /* Adjust as needed */
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
 }
 
 .photo:hover {
-    transform: scale(1.2);
-    /* Add a slight zoom effect on hover */
+    transform: scale(1.1);
 }
 
 .photo img {
@@ -36,15 +37,19 @@ h1 {
     height: auto;
     display: block;
     border-radius: 8px;
-    /* Add some rounded corners to the images */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Add a subtle shadow effect */
+    transition: transform 0.3s ease-in-out;
+    border: 4px solid #ffffff;
+    /* Agrega un marco blanco alrededor de las imágenes */
 }
 
-/* Media queries for responsiveness */
+.photo:hover img {
+    border-color: rgba(255, 255, 255, 0);
+    /* Hace que el marco desaparezca al pasar el ratón sobre la imagen */
+}
+
 @media (max-width: 768px) {
     .photo {
         width: calc(50% - 20px);
-        /* Adjust for smaller screens */
     }
 }
