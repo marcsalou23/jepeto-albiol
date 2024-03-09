@@ -52,7 +52,7 @@ export class ServicesListComponent implements OnInit {
     ],
     [
       {
-        name: 'Personaliza tu trip!',
+        name: 'Personaliza tu viaje!',
         price: 'Variable',
         image: '../../assets/images/custom.jpg',
         description:

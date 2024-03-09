@@ -2,10 +2,6 @@
   [ngStyle]="{ display: showMenu ? 'flex' : 'none' }"
   aria-label="Main Navigation"
 >
-  <!-- <a id="logo" href="#home">
-			<img src="../../assets/images/logo.png" />
-		</a> -->
-
   <a
     id="openmenu"
     *ngIf="isSmallScreen"
@@ -32,6 +28,7 @@
       </a>
     </li>
   </ul>
+  <div class="text-center d-lg-none modern-text">Menú</div>
 </nav>
 
 <!-- Offcanvas for smaller screens -->

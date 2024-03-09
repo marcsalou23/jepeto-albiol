@@ -7,16 +7,20 @@ nav {
 	left: 0;
 	right: 0;
 	z-index: 100;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Ananda Black', sans-serif;
 	letter-spacing: 1px;
 	padding-right: 5em;
-	justify-content: end;
+	justify-content: flex-end;
 	align-items: center;
 }
 
-/* img {
-	height: 70px;
-} */
+.modern-text {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1.5;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
 
 .menu-big {
 	list-style: none;
