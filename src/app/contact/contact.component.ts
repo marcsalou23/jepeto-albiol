@@ -8,12 +8,6 @@ import { ScrollService } from '../scroll.service';
 })
 export class ContactComponent {
   @Input() localBooking: boolean = false;
-  name: string = '';
-  email: string = '';
-  message: string = '';
-
-  showMessage: boolean = false;
-  messageText: string = ''; // Declare and initialize messageText property
 
   constructor(private scrollService: ScrollService) {}
 
