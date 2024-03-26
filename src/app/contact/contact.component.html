@@ -1,10 +1,6 @@
 <div class="container">
   <h1>FormSubmit Demo</h1>
-  <form
-    target="_blank"
-    action="https://formsubmit.co/felixianolopex5@gmail.com"
-    method="POST"
-  >
+  <form (ngSubmit)="submitForm()" method="post">
     <div class="form-group">
       <div class="form-row">
         <div class="col">
@@ -13,6 +9,7 @@
             name="name"
             class="form-control"
             placeholder="Full Name"
+            [(ngModel)]="name"
             required
           />
         </div>
@@ -22,6 +19,7 @@
             name="email"
             class="form-control"
             placeholder="Email Address"
+            [(ngModel)]="email"
             required
           />
         </div>
@@ -33,6 +31,7 @@
         class="form-control"
         name="message"
         rows="10"
+        [(ngModel)]="message"
         required
       ></textarea>
     </div>
@@ -40,16 +39,4 @@
       Submit Form
     </button>
   </form>
-</div>
-
-<div class="wrapp-map">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d891.7909792048005!2d1.0870780803131783!3d41.251935926711425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a152e64215bbd3%3A0x5efb101588cb4027!2s43479%20L&#39;Albiol%2C%20Tarragona!5e0!3m2!1ses!2ses!4v1707701225198!5m2!1ses!2ses"
-    width="600"
-    height="450"
-    style="border: 0"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-  ></iframe>
 </div>
