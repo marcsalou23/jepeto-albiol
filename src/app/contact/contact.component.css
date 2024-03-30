@@ -18,23 +18,22 @@ p {
 	line-height: 1.8;
 }
 
-.error {
+.error{
 	color: red;
 }
 
-.left a {
+.left a{
 	text-decoration: none;
 	color: #fff;
 }
 
-.text-input {
+.text-input{
 	letter-spacing: 2px;
 	font-size: 1.25rem;
 	line-height: 1.8;
 	font-family: 'Lato', sans-serif;
 	margin-bottom: 8px;
 }
-
 .input-group {
 	display: flex;
 	flex-direction: column;

@@ -1,9 +1,9 @@
-.content {
-	margin: 60px;
+* {
+	display: none;
 }
 
-.testimonials {
-	display: none;
+.content {
+	margin: 60px;
 }
 
 .row {
